@@ -14,16 +14,226 @@
     <link href="//db.onlinewebfonts.com/c/9a2bc11be56851dde98c1b49302cc21a?family=Gotham+Medium" rel="stylesheet" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The+Historia+Demo" rel="stylesheet" type="text/css"/>
     <meta name="google-site-verification" content="9P7lBLkCpxEcZAig0uq5LQzN-YUIhlLA37V1Gj3avcg" />
+    <style>
+        /* ── Skills Icon Grid ────────────────────────────────── */
+        .skills-grid {
+            margin-top: 2rem;
+        }
+        .skill-group {
+            margin-bottom: 5rem;
+        }
+        .skill-group-title {
+            font-size: 1.5rem;
+            color: #ff5a3d;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .skill-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: center;
+        }
+        .skill-icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+            width: 8rem;
+            cursor: default;
+        }
+        .skill-icon-item i {
+            font-size: 4.5rem;
+            color: #c5c5c5;
+            transition: color 650ms;
+        }
+        .skill-icon-item:hover i {
+            color: #ffffff;
+        }
+        .skill-text-icon {
+            width: 4.5rem;
+            height: 4.5rem;
+            border: 2px solid #c5c5c5;
+            border-radius: .8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #c5c5c5;
+            font-family: 'Gotham Medium', sans-serif;
+            transition: border-color 650ms, color 650ms;
+        }
+        .skill-icon-item:hover .skill-text-icon {
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+        .skill-icon-item span {
+            font-size: 1.3rem;
+            color: #c5c5c5;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* ── Education section reuses .experience timeline ───── */
+        .education-section {
+            padding: 6rem 0;
+        }
+
+        /* ── Initials Avatar ─────────────────────────────────── */
+        .avatar {
+            width: 16rem;
+            height: 16rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f0c800ce, #ff5a3dcb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'The Historia Demo', sans-serif;
+            font-size: 5rem;
+            color: #fff;
+            margin-right: 5rem;
+            flex-shrink: 0;
+            user-select: none;
+        }
+
+        /* ── Contact Section ─────────────────────────────────── */
+        .contact-body {
+            text-align: center;
+        }
+        .contact-body > p {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        .contact-cta {
+            display: inline-block;
+            padding: 1.2rem 3.5rem;
+            border: 2px solid #2e89ff;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2e89ff;
+            transition: background-color 650ms, color 650ms;
+        }
+        .contact-cta:hover {
+            background-color: #2e89ff;
+            color: #fff;
+        }
+        .contact-body .social-media {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ── Project Cards ───────────────────────────────────── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: .8rem;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 650ms, transform 650ms;
+        }
+        .project-card:hover {
+            border-color: rgba(240, 200, 0, 0.35);
+            transform: translateY(-5px);
+        }
+        .project-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-card-header i {
+            font-size: 2.8rem;
+            color: #ff5a3d;
+        }
+        .project-card h3 {
+            font-size: 1.9rem;
+            color: #ffffff;
+            font-weight: 400;
+        }
+        .project-card > p {
+            font-size: 1.5rem;
+            line-height: .65cm;
+            color: #a0a0a0;
+            margin-bottom: 2.5rem;
+            flex: 1;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .tech-tag {
+            font-size: 1.15rem;
+            padding: .35rem 1rem;
+            border: 1px solid rgba(255, 90, 61, 0.45);
+            border-radius: .4rem;
+            color: #ff5a3d;
+            font-family: 'Gotham Medium', sans-serif;
+        }
+        .tech-tag.tag-yellow {
+            border-color: rgba(240, 200, 0, 0.45);
+            color: #f0c800;
+        }
+        .project-links {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: auto;
+        }
+        .project-links a {
+            font-size: 1.35rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            transition: color 650ms;
+        }
+        .project-links a:hover {
+            color: #f0c800;
+        }
+        .project-links a i {
+            font-size: 1.6rem;
+        }
+        .project-badge {
+            display: inline-block;
+            font-size: 1.1rem;
+            padding: .3rem .9rem;
+            border-radius: 2rem;
+            background: rgba(46, 137, 255, 0.12);
+            border: 1px solid rgba(46, 137, 255, 0.3);
+            color: #2e89ff;
+            margin-bottom: 1.5rem;
+            font-family: 'Gotham Medium', sans-serif;
+        }
+
+        @media screen and (max-width: 600px) {
+            .avatar {
+                margin: 0 auto 5rem auto;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="left-circ" >
-                <img src="images/Group 1953.svg" alt="" >
-            </div>
-            <div class="circle-img" >
-                <img src="images/Group 1951.svg" alt="" >
-            </div>
         <div class="menu-toggler">
             <div class="bar half start"></div>
             <div class="bar"></div>
@@ -41,12 +251,29 @@
                 </li>
 
                 <li>
-                    <a href="#portfolio" class="nav-link">Learning</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+
+                </li>
+
+                <!-- Projects nav link disabled until live demos are available
+                <li>
+                    <a href="#projects" class="nav-link">Projects</a>
+
+                </li>
+                -->
+
+                <li>
+                    <a href="#experience" class="nav-link">Experience</a>
 
                 </li>
 
                 <li>
-                    <a href="#experience" class="nav-link">Education</a>
+                    <a href="#education" class="nav-link">Education</a>
+
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-link">Contact</a>
 
                 </li>
                
@@ -56,7 +283,7 @@
            
            
             <h1>Jerlin Lijo</h1>
-            <h6>Your Skill or Your Designation</h6>
+            <h6>Full Stack / MEAN Stack Developer</h6>
             <div class="scrolldown">
                 <span></span>
                 <span></span>
@@ -68,13 +295,7 @@
 
     <section class="about" id="about">
         <div class="container">
-            <div class="profile-img" >
-                <img src="images/profileimg.jpg"  data-aos="fade-up" data-aos-delay="300ms">
-                
-            </div>
-            <div class="skills-img" >
-                <img src="images/blackball.svg" alt="" >
-            </div>
+            <div class="avatar" data-aos="fade-up" data-aos-delay="300ms">JL</div>
             
             <div class="about-details" data-aos="fade-up" data-aos-delay="300ms" >
                 <div class="about-heading">
@@ -82,25 +303,26 @@
                     <h6>Myself</h6>
                 </div>
                 <br>
-                <h3> Hi! This is Jerlinlijo. </h3>
+                <h3> Hi! I'm Jerlin Lijo. </h3>
                 <br>
                 <p>
-                    I'm currently pursuing B.Tech computer science and engineering III year. I currently studying about Flutter
-                    development.Intuitive, resourceful, I am able to
-                    handle multiple tasks on a dailybasis,Energetic. I
-                    am always energetic and eager to learn new
-                    skills,Flexible,Hardworking,Honest,friendly to
-                    everyone
-                    
-                    <br> 
+                    Full Stack / MEAN Stack Developer with 3+ years of professional experience building
+                    scalable, production-grade web applications. Proficient in Angular, Node.js, Express.js,
+                    PostgreSQL, MySQL, and MongoDB, with hands-on exposure to AWS cloud services (Lambda, S3, SQS),
+                    Docker, Microservices, and Event-Driven Architecture.
                     <br>
-                    <a href="./jerlin resume.pdf" download="Resume" class="cta">Checkout my Resume</a>
-                
-                    
+                    <br>
+                    Experienced in developing RESTful APIs, implementing Reactive Forms, integrating Sequelize ORM,
+                    and working within Agile/Scrum teams. Passionate about writing clean, maintainable code and
+                    delivering reliable software across the full stack.
+
+                    <br>
+                    <br>
+                    <a href="./resume.pdf" download="Resume" class="cta">Checkout my Resume</a>
                 </p>
                 <br>
-               
-                <address>Contact me here <a href="jerlinlijo@karunya.edu.in" > jerlinlijo@karunya.edu.in</a>
+
+                <address>Contact me here <a href="mailto:lijojerlin@gmail.com">lijojerlin@gmail.com</a>
                 </address>
                 
                 <div class="social-media"  >
@@ -111,11 +333,11 @@
                             </a>
                         </li>
                         <li>
-                            <a href="" class="icon-link">
+                            <a href="https://github.com/jerlinlijo" class="icon-link">
                                 <i class="fab fa-github-square"></i>
                             </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="" class="icon-link">
                                 <i class="fab fa-twitter-square"></i>
                             </a>
@@ -124,9 +346,9 @@
                             <a href="" class="icon-link">
                                 <i class="fab fa-behance-square"></i>
                             </a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="" class="icon-link">
+                            <a href="https://medium.com/@jerlinlijo" class="icon-link">
                                 <i class="fab fa-medium"></i>
                             </a>
                         </li>
@@ -140,83 +362,343 @@
 
    
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="skills">
         <div class="container">
             <div class="section-heading">
-                <h1>Learning</h1>
-                <h6></h6>
+                <h1>Skills</h1>
+                <h6>Technologies I work with</h6>
             </div>
-            <div class="portfolio-item" data-aos="fade-in" data-aos-duration="300ms">
-                <div class="portfolio-img has-margin-right">
-                    <img src="images/portitem2.png" alt="">
+
+            <div class="skills-grid" data-aos="fade-up" data-aos-duration="300ms">
+
+                <!-- Frontend -->
+                <div class="skill-group">
+                    <p class="skill-group-title">Frontend</p>
+                    <div class="skill-icons">
+                        <div class="skill-icon-item">
+                            <i class="fab fa-angular"></i>
+                            <span>Angular</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">TS</span>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-description">
-                    <h6>Dart</h6>
-                    <h1>Dart is a programming language designed for client development, such as for the web and mobile apps.</h1>
-                   
+
+                <!-- Backend -->
+                <div class="skill-group">
+                    <p class="skill-group-title">Backend</p>
+                    <div class="skill-icons">
+                        <div class="skill-icon-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">Ex</span>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">API</span>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Databases & Caching -->
+                <div class="skill-group">
+                    <p class="skill-group-title">Databases &amp; Caching</p>
+                    <div class="skill-icons">
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">PG</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">Re</span>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="skill-group">
+                    <p class="skill-group-title">Cloud &amp; DevOps</p>
+                    <div class="skill-icons">
+                        <div class="skill-icon-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fas fa-cubes"></i>
+                            <span>Microservices</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testing -->
+                <div class="skill-group">
+                    <p class="skill-group-title">Testing</p>
+                    <div class="skill-icons">
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">Je</span>
+                            <span>Jest</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">Ja</span>
+                            <span>Jasmine</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">Ka</span>
+                            <span>Karma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & DevOps -->
+                <div class="skill-group">
+                    <p class="skill-group-title">Tools &amp; DevOps</p>
+                    <div class="skill-icons">
+                        <div class="skill-icon-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>CI/CD</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>Agile / Scrum</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="portfolio-item" data-aos="fade-in" data-aos-duration="300ms">
-                <div class="portfolio-description has-margin-right">
-                    <h6>Flutter</h6>
-                    <h1>To develop cross platform Applications for Android,IOS,WEB</h1>
-                   
-                </div>
-                <div class="portfolio-img has-margin-left">
-                    <img src="images/portitem1.png" alt="">
-                </div>
-            </div>
-            
-            <div class="experience-img" >
-                <img src="images/Group 1949.svg" alt="" >
-            </div>
-            
         </div>
     </section>
+
+    <!-- Projects section disabled until live demos are available
+    <section class="portfolio" id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Projects</h1>
+                <h6>Things I have built</h6>
+            </div>
+
+            <div class="projects-grid" data-aos="fade-up" data-aos-duration="300ms">
+
+                <div class="project-card">
+                    <span class="project-badge">Backend · REST API</span>
+                    <div class="project-card-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Task Flow API</h3>
+                    </div>
+                    <p>
+                        Scalable REST API for task and project management with JWT-based authentication,
+                        role-based access control (Admin / Member), and Redis caching for high-frequency
+                        endpoints. Includes AWS Lambda functions for async notifications and a full
+                        Jest unit test suite with 80%+ coverage. CI/CD via GitHub Actions deploys to
+                        Docker on every push to main.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Sequelize</span>
+                        <span class="tech-tag tag-yellow">Redis</span>
+                        <span class="tech-tag tag-yellow">AWS Lambda</span>
+                        <span class="tech-tag tag-yellow">Jest</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag tag-yellow">GitHub Actions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="icon-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                Project 2
+                <div class="project-card">
+                    <span class="project-badge">Frontend · Dashboard</span>
+                    <div class="project-card-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>DevBoard — Admin Dashboard</h3>
+                    </div>
+                    <p>
+                        Feature-rich Angular admin dashboard consuming the Task Flow API. Implements
+                        lazy-loaded modules, HTTP interceptors for auth token injection, Reactive Forms
+                        with strict TypeScript generics, and Angular Material components. Includes
+                        Jasmine/Karma unit tests for all services and components. Deployed via
+                        GitHub Actions to AWS S3 static hosting.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Angular Material</span>
+                        <span class="tech-tag">Reactive Forms</span>
+                        <span class="tech-tag tag-yellow">Jasmine</span>
+                        <span class="tech-tag tag-yellow">Karma</span>
+                        <span class="tech-tag tag-yellow">AWS S3</span>
+                        <span class="tech-tag tag-yellow">GitHub Actions</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="icon-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                Project 3
+                <div class="project-card">
+                    <span class="project-badge">Full Stack · MEAN</span>
+                    <div class="project-card-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>MediBook — Appointment System</h3>
+                    </div>
+                    <p>
+                        End-to-end healthcare appointment booking platform built on the MEAN stack.
+                        Patients can book, reschedule, and cancel appointments. AWS Lambda handles
+                        async email confirmations via SES, document uploads go to S3, and SQS
+                        queues background reminder jobs. Event-driven microservices architecture
+                        with full Docker Compose local setup and GitHub Actions CI pipeline.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag tag-yellow">AWS Lambda</span>
+                        <span class="tech-tag tag-yellow">AWS SQS</span>
+                        <span class="tech-tag tag-yellow">AWS S3</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag tag-yellow">Microservices</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="icon-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+ -->
+    
 
     <section class="experience" id="experience">
-        <div class="container" >
+        <div class="container">
             <div class="section-heading">
-                <h1>Education</h1>
-                <h6></h6>
+                <h1>Experience</h1>
+                <h6>Professional History</h6>
             </div>
-            <div class="timeline" >
+            <div class="timeline">
                 <ul>
-                    <li class="date" data-date="May 2016 - March 2017" data-aos="fade-up" data-aos-duration="300ms">
-                        <h1>Secondary school | vedic vidyashram</h1>
-                        <p>Score 80%
-                        </p>
+                    <li class="date" data-date="Jul 2025 – Present" data-aos="fade-up" data-aos-duration="300ms">
+                        <h1>Software Engineer – Full Stack Developer</h1>
+                        <p>Advanced Millennium Technology</p>
                         <br>
-                        <a href="" class="cta"></a>
+                        <p>Developing and maintaining full-stack web applications using Angular, Node.js, and Express.js.
+                           Designing and integrating RESTful APIs, working with PostgreSQL and AWS services (Lambda, S3, SQS),
+                           and contributing to microservices architecture within an Agile team.</p>
                     </li>
-                    <li class="date" data-date="June 2017 - April 2019" data-aos="fade-up" data-aos-duration="300ms">
-                        <h1>High school | francis xavier</h1>
-                        <p>score 60%
-                        </p>
+                    <li class="date" data-date="Dec 2022 – Jun 2025" data-aos="fade-up" data-aos-duration="300ms">
+                        <h1>Software Engineer – Full Stack Developer</h1>
+                        <p>Triquetra Healthcare &amp; Technology</p>
                         <br>
-                        <a href="" class="cta"></a>
-                    </li>
-                    <li class="date" data-date="July 2019 - May 2023" data-aos="fade-up" data-aos-duration="300ms">
-                        <h1>Graduation</h1>
-                        <p>CGPA 6(currently)
-                        </p>
-                        <br>
-                        <a href="" class="cta"></a>
+                        <p>Built and enhanced healthcare platform features using the MEAN stack (MongoDB, Express.js, Angular, Node.js).
+                           Implemented Reactive Forms, Sequelize ORM integrations, Docker-based deployments, and conducted
+                           vulnerability assessments using Nuclei Scanner and Salt Minion within a Scrum workflow.</p>
                     </li>
                 </ul>
-                <div class="contact-img" >
-                    <img src="images/Group 1956.svg" alt="" >
+            </div>
+        </div>
+    </section>
+
+    <section class="experience education-section" id="education">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Education</h1>
+                <h6>Academic Background</h6>
+            </div>
+            <div class="timeline">
+                <ul>
+                    <li class="date" data-date="Jul 2019 – May 2023" data-aos="fade-up" data-aos-duration="300ms">
+                        <h1>B.Tech – Computer Science &amp; Engineering</h1>
+                        <p>Karunya Institute of Technology and Sciences</p>
+                        <br>
+                        <p>Graduated with a Bachelor's degree in Computer Science and Engineering. Built a strong
+                           foundation in data structures, algorithms, software engineering, database management,
+                           and web technologies — leading into a career in full-stack development.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Contact</h1>
+                <h6>Let's work together</h6>
+            </div>
+            <div class="contact-body" data-aos="fade-up" data-aos-duration="300ms">
+                <p>Open to full-time roles, freelance projects, and collaborations.</p>
+                <a href="mailto:jerlinlijo@gmail.com" class="contact-cta">Send me an email</a>
+                <div class="social-media">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="https://www.linkedin.com/in/jerlinlijo/" class="icon-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jerlinlijo" class="icon-link">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="" class="icon-link">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </li> -->
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-   
     <footer class="copyright">
         <div class="up" id="up">
             <i class="fas fa-chevron-up"></i>
         </div>
-        <p>&copy; 2022 Jerlinlijo</p>
+        <p>&copy; 2026 Jerlin Lijo</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
