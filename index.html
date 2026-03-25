@@ -15,13 +15,10 @@
     <link href="//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The+Historia+Demo" rel="stylesheet" type="text/css"/>
     <meta name="google-site-verification" content="9P7lBLkCpxEcZAig0uq5LQzN-YUIhlLA37V1Gj3avcg" />
     <style>
+
         /* ── Skills Icon Grid ────────────────────────────────── */
-        .skills-grid {
-            margin-top: 2rem;
-        }
-        .skill-group {
-            margin-bottom: 5rem;
-        }
+        .skills-grid { margin-top: 2rem; }
+        .skill-group { margin-bottom: 5rem; }
         .skill-group-title {
             font-size: 1.5rem;
             color: #ff5a3d;
@@ -29,7 +26,7 @@
             letter-spacing: 3px;
             margin-bottom: 3rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             text-align: center;
         }
         .skill-icons {
@@ -51,9 +48,7 @@
             color: #c5c5c5;
             transition: color 650ms;
         }
-        .skill-icon-item:hover i {
-            color: #ffffff;
-        }
+        .skill-icon-item:hover i { color: #ffffff; }
         .skill-text-icon {
             width: 4.5rem;
             height: 4.5rem;
@@ -62,7 +57,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: bold;
             letter-spacing: 1px;
             color: #c5c5c5;
@@ -80,12 +75,10 @@
             line-height: 1.5;
         }
 
-        /* ── Education section reuses .experience timeline ───── */
-        .education-section {
-            padding: 6rem 0;
-        }
+        /* ── Education ───────────────────────────────────────── */
+        .education-section { padding: 6rem 0; }
 
-        /* ── Initials Avatar ─────────────────────────────────── */
+        /* ── Avatar ──────────────────────────────────────────── */
         .avatar {
             width: 16rem;
             height: 16rem;
@@ -102,14 +95,9 @@
             user-select: none;
         }
 
-        /* ── Contact Section ─────────────────────────────────── */
-        .contact-body {
-            text-align: center;
-        }
-        .contact-body > p {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-        }
+        /* ── Contact ─────────────────────────────────────────── */
+        .contact-body { text-align: center; }
+        .contact-body > p { font-size: 2rem; margin-bottom: 3rem; }
         .contact-cta {
             display: inline-block;
             padding: 1.2rem 3.5rem;
@@ -120,14 +108,8 @@
             color: #2e89ff;
             transition: background-color 650ms, color 650ms;
         }
-        .contact-cta:hover {
-            background-color: #2e89ff;
-            color: #fff;
-        }
-        .contact-body .social-media {
-            display: flex;
-            justify-content: center;
-        }
+        .contact-cta:hover { background-color: #2e89ff; color: #fff; }
+        .contact-body .social-media { display: flex; justify-content: center; }
 
         /* ── Project Cards ───────────────────────────────────── */
         .projects-grid {
@@ -137,8 +119,8 @@
             margin-top: 2rem;
         }
         .project-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
             border-radius: .8rem;
             padding: 3rem;
             display: flex;
@@ -146,7 +128,7 @@
             transition: border-color 650ms, transform 650ms;
         }
         .project-card:hover {
-            border-color: rgba(240, 200, 0, 0.35);
+            border-color: rgba(240,200,0,0.35);
             transform: translateY(-5px);
         }
         .project-card-header {
@@ -155,45 +137,29 @@
             gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
-        .project-card-header i {
-            font-size: 2.8rem;
-            color: #ff5a3d;
-        }
-        .project-card h3 {
-            font-size: 1.9rem;
-            color: #ffffff;
-            font-weight: 400;
-        }
+        .project-card-header i { font-size: 2.8rem; color: #ff5a3d; }
+        .project-card h3 { font-size: 1.9rem; color: #ffffff; font-weight: 400; }
         .project-card > p {
             font-size: 1.5rem;
-            line-height: .65cm;
+            line-height: 1.7;
             color: #a0a0a0;
             margin-bottom: 2.5rem;
             flex: 1;
         }
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-        }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
         .tech-tag {
             font-size: 1.15rem;
             padding: .35rem 1rem;
-            border: 1px solid rgba(255, 90, 61, 0.45);
+            border: 1px solid rgba(255,90,61,0.45);
             border-radius: .4rem;
             color: #ff5a3d;
             font-family: 'Gotham Medium', sans-serif;
         }
         .tech-tag.tag-yellow {
-            border-color: rgba(240, 200, 0, 0.45);
+            border-color: rgba(240,200,0,0.45);
             color: #f0c800;
         }
-        .project-links {
-            display: flex;
-            gap: 2.5rem;
-            margin-top: auto;
-        }
+        .project-links { display: flex; gap: 2.5rem; margin-top: auto; }
         .project-links a {
             font-size: 1.35rem;
             text-transform: uppercase;
@@ -203,31 +169,42 @@
             gap: .6rem;
             transition: color 650ms;
         }
-        .project-links a:hover {
-            color: #f0c800;
-        }
-        .project-links a i {
-            font-size: 1.6rem;
-        }
+        .project-links a:hover { color: #f0c800; }
+        .project-links a i { font-size: 1.6rem; }
         .project-badge {
             display: inline-block;
             font-size: 1.1rem;
             padding: .3rem .9rem;
             border-radius: 2rem;
-            background: rgba(46, 137, 255, 0.12);
-            border: 1px solid rgba(46, 137, 255, 0.3);
+            background: rgba(46,137,255,0.12);
+            border: 1px solid rgba(46,137,255,0.3);
             color: #2e89ff;
             margin-bottom: 1.5rem;
             font-family: 'Gotham Medium', sans-serif;
         }
 
+        /* ── Experience Bullets ──────────────────────────────── */
+        .exp-bullets { margin-top: 1rem; }
+        .exp-bullet {
+            font-size: 1.5rem;
+            color: #a0a0a0;
+            line-height: 1.7;
+            padding-left: 1.6rem;
+            position: relative;
+            margin-bottom: .7rem;
+        }
+        .exp-bullet::before {
+            content: "\25B8";
+            position: absolute;
+            left: 0;
+            color: #ff5a3d;
+            font-size: 1.2rem;
+            top: .1rem;
+        }
+
         @media screen and (max-width: 600px) {
-            .avatar {
-                margin: 0 auto 5rem auto;
-            }
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
+            .avatar { margin: 0 auto 5rem auto; }
+            .projects-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -241,92 +218,60 @@
         </div>
         <nav class="top-nav">
             <ul class="nav-list">
-                <li>
-                    <a href="index.html" class="nav-link">Home</a>
-
-                </li>
-                <li>
-                    <a href="#about" class="nav-link">About</a>
-
-                </li>
-
-                <li>
-                    <a href="#skills" class="nav-link">Skills</a>
-
-                </li>
-
-                <!-- Projects nav link disabled until live demos are available
-                <li>
-                    <a href="#projects" class="nav-link">Projects</a>
-
-                </li>
-                -->
-
-                <li>
-                    <a href="#experience" class="nav-link">Experience</a>
-
-                </li>
-
-                <li>
-                    <a href="#education" class="nav-link">Education</a>
-
-                </li>
-
-                <li>
-                    <a href="#contact" class="nav-link">Contact</a>
-
-                </li>
-               
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
         <div class="landing-text">
-           
-           
             <h1>Jerlin Lijo</h1>
-            <h6>Full Stack / MEAN Stack Developer</h6>
+            <h6>Full-Stack Engineer &nbsp;&middot;&nbsp; Angular &amp; TypeScript &nbsp;&middot;&nbsp; Node.js &nbsp;&middot;&nbsp; Cloud</h6>
             <div class="scrolldown">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-        
     </header>
 
+    <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
             <div class="avatar" data-aos="fade-up" data-aos-delay="300ms">JL</div>
-            
-            <div class="about-details" data-aos="fade-up" data-aos-delay="300ms" >
+            <div class="about-details" data-aos="fade-up" data-aos-delay="300ms">
                 <div class="about-heading">
                     <h1>About</h1>
                     <h6>Myself</h6>
                 </div>
                 <br>
-                <h3> Hi! I'm Jerlin Lijo. </h3>
+                <h3>Hi! I'm Jerlin Lijo.</h3>
                 <br>
                 <p>
-                    Full Stack / MEAN Stack Developer with 3+ years of professional experience building
-                    scalable, production-grade web applications. Proficient in Angular, Node.js, Express.js,
-                    PostgreSQL, MySQL, and MongoDB, with hands-on exposure to AWS cloud services (Lambda, S3, SQS),
-                    Docker, Microservices, and Event-Driven Architecture.
-                    <br>
-                    <br>
-                    Experienced in developing RESTful APIs, implementing Reactive Forms, integrating Sequelize ORM,
-                    and working within Agile/Scrum teams. Passionate about writing clean, maintainable code and
-                    delivering reliable software across the full stack.
-
-                    <br>
-                    <br>
-                    <a href="./resume.pdf" download="Resume" class="cta">Checkout my Resume</a>
+                    Full-Stack Engineer with 3+ years of experience building scalable, production-grade
+                    web applications across healthcare and enterprise domains. Front-end focused with
+                    deep expertise in <strong>Angular and TypeScript</strong> — component architecture,
+                    reactive forms, state management, and responsive UI design.
+                    <br><br>
+                    Strong back-end proficiency in <strong>Node.js, Express.js</strong>, and RESTful API
+                    development, paired with solid <strong>SQL and NoSQL database</strong> skills.
+                    Experienced with <strong>AWS, Docker, Redis</strong>, CI/CD pipelines, and
+                    Agile/Scrum delivery. Delivered healthcare platforms serving
+                    <strong>500+ daily active users</strong> and improved API response times by
+                    <strong>~30%</strong> through targeted backend optimisation.
+                    <br><br>
+                    <a href="./resume.pdf" download="Jerlin_Lijo_Resume" class="cta">Download Resume</a>
                 </p>
                 <br>
-
-                <address>Contact me here <a href="mailto:lijojerlin@gmail.com">lijojerlin@gmail.com</a>
+                <address>
+                    Bengaluru, India &nbsp;&middot;&nbsp;
+                    <a href="mailto:lijojerlin@gmail.com">lijojerlin@gmail.com</a>
                 </address>
-                
-                <div class="social-media"  >
-                    <ul class="nav-list"  >
+                <div class="social-media">
+                    <ul class="nav-list">
                         <li>
                             <a href="https://www.linkedin.com/in/jerlinlijo/" class="icon-link">
                                 <i class="fab fa-linkedin"></i>
@@ -337,16 +282,6 @@
                                 <i class="fab fa-github-square"></i>
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="" class="icon-link">
-                                <i class="fab fa-twitter-square"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="icon-link">
-                                <i class="fab fa-behance-square"></i>
-                            </a>
-                        </li> -->
                         <li>
                             <a href="https://medium.com/@jerlinlijo" class="icon-link">
                                 <i class="fab fa-medium"></i>
@@ -354,24 +289,19 @@
                         </li>
                     </ul>
                 </div>
-                 
             </div>
-            
         </div>
     </section>
 
-   
-
+    <!-- SKILLS -->
     <section class="portfolio" id="skills">
         <div class="container">
             <div class="section-heading">
                 <h1>Skills</h1>
                 <h6>Technologies I work with</h6>
             </div>
-
             <div class="skills-grid" data-aos="fade-up" data-aos-duration="300ms">
 
-                <!-- Frontend -->
                 <div class="skill-group">
                     <p class="skill-group-title">Frontend</p>
                     <div class="skill-icons">
@@ -380,12 +310,12 @@
                             <span>Angular</span>
                         </div>
                         <div class="skill-icon-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-icon-item">
                             <span class="skill-text-icon">TS</span>
                             <span>TypeScript</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
                         </div>
                         <div class="skill-icon-item">
                             <i class="fab fa-html5"></i>
@@ -398,7 +328,6 @@
                     </div>
                 </div>
 
-                <!-- Backend -->
                 <div class="skill-group">
                     <p class="skill-group-title">Backend</p>
                     <div class="skill-icons">
@@ -414,10 +343,13 @@
                             <span class="skill-text-icon">API</span>
                             <span>REST APIs</span>
                         </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">WS</span>
+                            <span>WebSockets</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Databases & Caching -->
                 <div class="skill-group">
                     <p class="skill-group-title">Databases &amp; Caching</p>
                     <div class="skill-icons">
@@ -440,7 +372,6 @@
                     </div>
                 </div>
 
-                <!-- Cloud & DevOps -->
                 <div class="skill-group">
                     <p class="skill-group-title">Cloud &amp; DevOps</p>
                     <div class="skill-icons">
@@ -456,17 +387,16 @@
                             <i class="fas fa-cubes"></i>
                             <span>Microservices</span>
                         </div>
+                        <div class="skill-icon-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>CI/CD</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Testing -->
                 <div class="skill-group">
                     <p class="skill-group-title">Testing</p>
                     <div class="skill-icons">
-                        <div class="skill-icon-item">
-                            <span class="skill-text-icon">Je</span>
-                            <span>Jest</span>
-                        </div>
                         <div class="skill-icon-item">
                             <span class="skill-text-icon">Ja</span>
                             <span>Jasmine</span>
@@ -475,15 +405,18 @@
                             <span class="skill-text-icon">Ka</span>
                             <span>Karma</span>
                         </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">Je</span>
+                            <span>Jest</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Tools & DevOps -->
                 <div class="skill-group">
-                    <p class="skill-group-title">Tools &amp; DevOps</p>
+                    <p class="skill-group-title">Tools &amp; Practices</p>
                     <div class="skill-icons">
                         <div class="skill-icon-item">
-                            <i class="fab fa-git-alt"></i>
+                            <span class="skill-text-icon">Git</span>
                             <span>Git</span>
                         </div>
                         <div class="skill-icon-item">
@@ -491,12 +424,12 @@
                             <span>GitHub</span>
                         </div>
                         <div class="skill-icon-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>CI/CD</span>
-                        </div>
-                        <div class="skill-icon-item">
                             <i class="fas fa-sync-alt"></i>
                             <span>Agile / Scrum</span>
+                        </div>
+                        <div class="skill-icon-item">
+                            <span class="skill-text-icon">ORM</span>
+                            <span>Sequelize</span>
                         </div>
                     </div>
                 </div>
@@ -505,113 +438,102 @@
         </div>
     </section>
 
-    <!-- Projects section disabled until live demos are available
+    <!-- PROJECTS -->
     <section class="portfolio" id="projects">
         <div class="container">
             <div class="section-heading">
                 <h1>Projects</h1>
                 <h6>Things I have built</h6>
             </div>
-
             <div class="projects-grid" data-aos="fade-up" data-aos-duration="300ms">
 
                 <div class="project-card">
-                    <span class="project-badge">Backend · REST API</span>
+                    <span class="project-badge">Frontend &middot; Healthcare</span>
                     <div class="project-card-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Task Flow API</h3>
+                        <i class="fas fa-notes-medical"></i>
+                        <h3>Healthcare EHR Portal</h3>
                     </div>
                     <p>
-                        Scalable REST API for task and project management with JWT-based authentication,
-                        role-based access control (Admin / Member), and Redis caching for high-frequency
-                        endpoints. Includes AWS Lambda functions for async notifications and a full
-                        Jest unit test suite with 80%+ coverage. CI/CD via GitHub Actions deploys to
-                        Docker on every push to main.
-                    </p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Sequelize</span>
-                        <span class="tech-tag tag-yellow">Redis</span>
-                        <span class="tech-tag tag-yellow">AWS Lambda</span>
-                        <span class="tech-tag tag-yellow">Jest</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag tag-yellow">GitHub Actions</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="icon-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-
-                Project 2
-                <div class="project-card">
-                    <span class="project-badge">Frontend · Dashboard</span>
-                    <div class="project-card-header">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>DevBoard — Admin Dashboard</h3>
-                    </div>
-                    <p>
-                        Feature-rich Angular admin dashboard consuming the Task Flow API. Implements
-                        lazy-loaded modules, HTTP interceptors for auth token injection, Reactive Forms
-                        with strict TypeScript generics, and Angular Material components. Includes
-                        Jasmine/Karma unit tests for all services and components. Deployed via
-                        GitHub Actions to AWS S3 static hosting.
+                        Multi-module Electronic Health Records portal covering patient registration,
+                        clinical documentation, appointment scheduling, and billing — serving 500+ daily
+                        active users. Built role-based access control (RBAC) for data privacy compliance
+                        and RESTful API integrations for interoperability with third-party diagnostic systems.
                     </p>
                     <div class="tech-tags">
                         <span class="tech-tag">Angular</span>
                         <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Angular Material</span>
-                        <span class="tech-tag">Reactive Forms</span>
-                        <span class="tech-tag tag-yellow">Jasmine</span>
-                        <span class="tech-tag tag-yellow">Karma</span>
-                        <span class="tech-tag tag-yellow">AWS S3</span>
-                        <span class="tech-tag tag-yellow">GitHub Actions</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag tag-yellow">REST APIs</span>
+                        <span class="tech-tag tag-yellow">RBAC</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="icon-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a style="color:#555;cursor:default;text-decoration:none;">
+                            <i class="fas fa-lock"></i>&nbsp;Enterprise Project
+                        </a>
                     </div>
                 </div>
 
-                Project 3
                 <div class="project-card">
-                    <span class="project-badge">Full Stack · MEAN</span>
+                    <span class="project-badge">Real-Time &middot; Dashboard</span>
                     <div class="project-card-header">
                         <i class="fas fa-heartbeat"></i>
-                        <h3>MediBook — Appointment System</h3>
+                        <h3>LIS &amp; RIS Real-Time Dashboard</h3>
                     </div>
                     <p>
-                        End-to-end healthcare appointment booking platform built on the MEAN stack.
-                        Patients can book, reschedule, and cancel appointments. AWS Lambda handles
-                        async email confirmations via SES, document uploads go to S3, and SQS
-                        queues background reminder jobs. Event-driven microservices architecture
-                        with full Docker Compose local setup and GitHub Actions CI pipeline.
+                        Live Laboratory and Radiology Information System dashboard with real-time data
+                        synchronisation via WebSockets — reducing result visibility latency from minutes
+                        to near-instant for clinical staff. Optimised MySQL queries for high-frequency
+                        polling, achieving sub-200ms average response times under concurrent load.
                     </p>
                     <div class="tech-tags">
                         <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">TypeScript</span>
                         <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag tag-yellow">AWS Lambda</span>
-                        <span class="tech-tag tag-yellow">AWS SQS</span>
-                        <span class="tech-tag tag-yellow">AWS S3</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag tag-yellow">Microservices</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag tag-yellow">WebSockets</span>
+                        <span class="tech-tag tag-yellow">Real-Time</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="icon-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a style="color:#555;cursor:default;text-decoration:none;">
+                            <i class="fas fa-lock"></i>&nbsp;Enterprise Project
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-badge">Full-Stack &middot; Enterprise</span>
+                    <div class="project-card-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Enterprise Web Application</h3>
+                    </div>
+                    <p>
+                        Large-scale enterprise application with complex relational data models,
+                        UUID-based routing, and high-volume production workloads. Designed RESTful APIs
+                        with structured validation and secure data flow. Built a reusable Angular
+                        component library that cut UI development effort by ~25% across feature releases.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag tag-yellow">Sequelize ORM</span>
+                        <span class="tech-tag tag-yellow">Azure</span>
+                    </div>
+                    <div class="project-links">
+                        <a style="color:#555;cursor:default;text-decoration:none;">
+                            <i class="fas fa-lock"></i>&nbsp;Enterprise Project
+                        </a>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
- -->
-    
 
+    <!-- EXPERIENCE -->
     <section class="experience" id="experience">
         <div class="container">
             <div class="section-heading">
@@ -621,26 +543,35 @@
             <div class="timeline">
                 <ul>
                     <li class="date" data-date="Jul 2025 – Present" data-aos="fade-up" data-aos-duration="300ms">
-                        <h1>Software Engineer – Full Stack Developer</h1>
-                        <p>Advanced Millennium Technology</p>
-                        <br>
-                        <p>Developing and maintaining full-stack web applications using Angular, Node.js, and Express.js.
-                           Designing and integrating RESTful APIs, working with PostgreSQL and AWS services (Lambda, S3, SQS),
-                           and contributing to microservices architecture within an Agile team.</p>
+                        <h1>Full-Stack Engineer</h1>
+                        <p>Advance Millennium Technology &nbsp;&middot;&nbsp; Bengaluru, India</p>
+                        <div class="exp-bullets">
+                            <p class="exp-bullet">Build and maintain enterprise-grade web applications using Angular, TypeScript, Node.js, Express.js, and PostgreSQL, supporting high-volume production environments.</p>
+                            <p class="exp-bullet">Architect scalable RESTful APIs with structured validation, role-based access control, and secure data flow — reducing integration defects by ~35% through standardised error-handling patterns.</p>
+                            <p class="exp-bullet">Maintain a reusable Angular component library (Angular Material + Reactive Forms), cutting UI development effort by ~25% across new feature releases.</p>
+                            <p class="exp-bullet">Optimise backend queries using Sequelize ORM, improving average API response time by ~30% on data-intensive endpoints.</p>
+                            <p class="exp-bullet">Work with AWS services (Lambda, S3, SQS) and contribute to microservices architecture within an Agile/Scrum team.</p>
+                        </div>
                     </li>
                     <li class="date" data-date="Dec 2022 – Jun 2025" data-aos="fade-up" data-aos-duration="300ms">
-                        <h1>Software Engineer – Full Stack Developer</h1>
-                        <p>Triquetra Healthcare &amp; Technology</p>
-                        <br>
-                        <p>Built and enhanced healthcare platform features using the MEAN stack (MongoDB, Express.js, Angular, Node.js).
-                           Implemented Reactive Forms, Sequelize ORM integrations, Docker-based deployments, and conducted
-                           vulnerability assessments using Nuclei Scanner and Salt Minion within a Scrum workflow.</p>
+                        <h1>Full-Stack Engineer</h1>
+                        <p>Triquetra Healthcare &amp; Technology Pvt. Ltd. &nbsp;&middot;&nbsp; Bengaluru, India</p>
+                        <div class="exp-bullets">
+                            <p class="exp-bullet">Led front-end development for 3 international healthcare products — EHR, LIS, and RIS — using Angular and TypeScript, delivering responsive interfaces used by clinical teams across multiple countries.</p>
+                            <p class="exp-bullet">Designed and maintained MySQL database schemas; applied strategic indexing and query optimisation, improving data-retrieval performance by ~25% under concurrent load.</p>
+                            <p class="exp-bullet">Built and integrated RESTful APIs using Node.js and Express.js for secure communication between Angular front-ends and healthcare back-end services.</p>
+                            <p class="exp-bullet">Implemented real-time data synchronisation via WebSockets, enabling near-instant live updates for laboratory and radiology workflows.</p>
+                            <p class="exp-bullet">Developed a shared Angular component library reused across 5+ project modules, reducing duplicate code by ~20%.</p>
+                            <p class="exp-bullet">Wrote unit tests using Jasmine and Karma; managed Docker-based deployments and conducted vulnerability assessments within a Scrum workflow.</p>
+                            <p class="exp-bullet">Mentored 2 junior developers on Angular architecture, RESTful design principles, and Agile best practices.</p>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- EDUCATION -->
     <section class="experience education-section" id="education">
         <div class="container">
             <div class="section-heading">
@@ -650,7 +581,7 @@
             <div class="timeline">
                 <ul>
                     <li class="date" data-date="Jul 2019 – May 2023" data-aos="fade-up" data-aos-duration="300ms">
-                        <h1>B.Tech – Computer Science &amp; Engineering</h1>
+                        <h1>B.Tech &ndash; Computer Science &amp; Engineering</h1>
                         <p>Karunya Institute of Technology and Sciences</p>
                         <br>
                         <p>Graduated with a Bachelor's degree in Computer Science and Engineering. Built a strong
@@ -662,6 +593,7 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="experience" id="contact">
         <div class="container">
             <div class="section-heading">
@@ -669,8 +601,8 @@
                 <h6>Let's work together</h6>
             </div>
             <div class="contact-body" data-aos="fade-up" data-aos-duration="300ms">
-                <p>Open to full-time roles, freelance projects, and collaborations.</p>
-                <a href="mailto:jerlinlijo@gmail.com" class="contact-cta">Send me an email</a>
+                <p>Open to full-time roles at product companies and MNCs. Based in Bengaluru, India.</p>
+                <a href="mailto:lijojerlin@gmail.com" class="contact-cta">Send me an email</a>
                 <div class="social-media">
                     <ul class="nav-list">
                         <li>
@@ -683,11 +615,11 @@
                                 <i class="fab fa-github-square"></i>
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="" class="icon-link">
-                                <i class="fab fa-twitter-square"></i>
+                        <li>
+                            <a href="https://medium.com/@jerlinlijo" class="icon-link">
+                                <i class="fab fa-medium"></i>
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -700,8 +632,8 @@
         </div>
         <p>&copy; 2026 Jerlin Lijo</p>
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
