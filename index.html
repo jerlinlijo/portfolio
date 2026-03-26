@@ -636,6 +636,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
+<script>
+  let triggered = false;
+
+  function removeListeners() {
+    window.removeEventListener("scroll", handleScroll);
+    document.removeEventListener("touchstart", triggerOnce);
+  }
+
+  function triggerOnce() {
+    if (triggered) return;
+    triggered = true;
+    removeListeners();
+    trackVisitor();
+  }
+
+  function handleScroll() {
+    if (window.scrollY > 5) triggerOnce();
+  }
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  document.addEventListener("touchstart", triggerOnce, { passive: true });
+
+  async function trackVisitor() {
+    try {
+      const geo = await fetch("https://ipapi.co/json/").then(r => r.json());
+      sendVisitorData(geo);
+    } catch {
+      sendVisitorData(null);
+    }
+  }
+
+  function sendVisitorData(geo) {
+    fetch("https://portfolio-tracker-g4pw.onrender.com/api/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ip: geo?.ip,
+        city: geo?.city,
+        region: geo?.region,
+        country: geo?.country_name,
+        lat: geo?.latitude,
+        lon: geo?.longitude,
+        userAgent: navigator.userAgent,
+      }),
+    }).catch(() => {});
+  }
+</script>
 </body>
 
 </html>
